@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+<style>
+    i {
+        font-size: 150px;
+        color: gray;
+    }
+
+    #main {
+        width: 100%;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        $("i").hover(function(){
+            $(this).toggleClass("colored");
+        });
+    }
+
+
+</script>
+
+<div class="container" id="main">
+    <i class="devicon-android-plain"></i>
+    <i class="devicon-nodejs-plain"></i>
+    <i class="devicon-css3-plain-wordmark"></i>
+    <i class="devicon-python-plain"></i>
+    <i class="devicon-bootstrap-plain"></i>
+    <i class="devicon-express-original"></i>
+    <i class="devicon-java-plain"></i>
+    <i class="devicon-javascript-plain"></i>
+    <i class="devicon-git-plain"></i>
+    <i class="devicon-jquery-plain"></i>
+    <i class="devicon-mongodb-plain"></i>
+    <i class="devicon-amazonwebservices-original"></i>
+    <i class="devicon-heroku-original"></i>
+    <i class="devicon-linux-plain"></i>
+    <i class="devicon-sass-original"></i>
+
+
+</div>
+
+<% include partials/footer %>
