@@ -4,10 +4,28 @@
     i {
         font-size: 150px;
         color: gray;
+        -webkit-transition: -webkit-transform 2s ease-in-out;
+    }
+    #main {
+        width: 100%;
+    }
+
+    .anim{
+        -webkit-transform:translate(0,100px);
+    }
+
+    .icon {
+        width: 150px;
+        float: left;
+        margin: 2% 2% 2% 2%;
     }
 
     #main {
-        width: 100%;
+        padding-top: 5%;
+    }
+
+    * {
+        border: solid 1px black;
     }
 </style>
 
@@ -16,27 +34,83 @@
         $("i").hover(function(){
             $(this).toggleClass("colored");
         });
+
+        $(".icon").hover(function(){
+            $(this).toggleClass("tada");
+        });
+
     }
+
 
 
 </script>
 
 <div class="container" id="main">
-    <i class="devicon-android-plain"></i>
-    <i class="devicon-nodejs-plain"></i>
-    <i class="devicon-css3-plain-wordmark"></i>
-    <i class="devicon-python-plain"></i>
-    <i class="devicon-bootstrap-plain"></i>
-    <i class="devicon-express-original"></i>
-    <i class="devicon-java-plain"></i>
-    <i class="devicon-javascript-plain"></i>
-    <i class="devicon-git-plain"></i>
-    <i class="devicon-jquery-plain"></i>
-    <i class="devicon-mongodb-plain"></i>
-    <i class="devicon-amazonwebservices-original"></i>
-    <i class="devicon-heroku-original"></i>
-    <i class="devicon-linux-plain"></i>
-    <i class="devicon-sass-original"></i>
+    <div id="languages">
+        <h2>Languages I know: </h2>
+        <div class="row">
+            <div class="animated icon col">
+                <i class="devicon-python-plain"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-javascript-plain"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-css3-plain"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-html5-plain"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-java-plain"></i>
+            </div>
+        </div>
+    </div>
+    <div id="tools">
+        <h2>Tools I work with:</h2>
+
+        <div class="row">
+            <div class="animated icon col">
+                <i class="devicon-android-plain"></i>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-nodejs-plain animated"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-bootstrap-plain"></i>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-git-plain"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-express-original"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-jquery-plain"></i>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-linux-plain"></i>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-heroku-original"></i>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-amazonwebservices-original"></i>
+            </div>
+
+            <div class="animated icon col">
+                <i class="devicon-mongodb-plain"></i>
+            </div>
+        </div>
+    </div>
+
 
 
 </div>
