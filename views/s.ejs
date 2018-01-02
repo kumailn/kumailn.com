@@ -2,7 +2,7 @@
 
 <style>
     i {
-        font-size: 150px;
+        font-size: 100px;
         color: gray;
         -webkit-transition: -webkit-transform 2s ease-in-out;
     }
@@ -12,15 +12,19 @@
     #main {
         width: 100%;
     }
+    h1 {
+        font-family: 'Merriweather Sans', sans-serif;
+    }
 
     .anim{
         -webkit-transform:translate(0,100px);
     }
 
     .icon {
-        width: 150px;
+        width: 100px;
         float: left;
-        margin: 2% 2% 2% 2%;
+        margin: 1% 1% 1% 1%;
+        paddint-top: 20px;
     }
 
     #main {
@@ -71,6 +75,16 @@
     .tech:hover {
         color: #FFFFFF;
     }
+    #tools{
+        margin-top: 5%;
+    }
+    #contact {
+        margin-top: 5%;
+    }
+
+    .row {
+        padding-top: 2%;
+    }
 </style>
 
 <script>
@@ -83,6 +97,38 @@
             $(this).toggleClass("tada");
         });
 
+        var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Traveller", "Computer Scientist"]
+        function pickOne(lines) {
+            console.log(Math.random() * lines.length);
+        }
+
+        var picked = []
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        }
+
+        var intervalID = setInterval(
+            function(){
+                var index = getRandomInt(0, lines.length);
+                while(picked.includes(index)){
+                    index = getRandomInt(0, lines.length);
+                    if(picked.length == lines.length){
+                        index = getRandomInt(0, lines.length);
+                        picked = [];
+                        break;
+                    }
+                }
+                picked.push(index);
+                $("#caption").text(lines[index]);
+                console.log(lines[index]);
+                //console.log(getRandomInt(0, lines.length));
+            }
+        , 2000);
+
+
     }
 
 
@@ -90,6 +136,7 @@
 </script>
 <div>
     <h1 class="text-center" id="name">Kumail Naqvi</h1>
+    <h3 class="text-center" id="caption">Coder</h3>
 </div>
 <div class="container" id="main">
 
@@ -137,7 +184,8 @@
             <div class="animated icon col">
                 <a href="https://expressjs.com/" target="_blank" class="tech"><i class="devicon-express-original"></i></a>
             </div>
-
+        </div>
+        <div class="row" >
             <div class="animated icon col">
                 <a href="https://jquery.com/" target="_blank" class="tech"><i class="devicon-jquery-plain"></i></a>
             </div>
@@ -145,7 +193,7 @@
                 <i class="devicon-linux-plain" class="tech"></i>
             </div>
             <div class="animated icon col">
-                <a href="heroku.com" target="_blank" class="tech"><i class="devicon-heroku-original"></i></a>
+                <a href="https://www.heroku.com/" target="_blank" class="tech"><i class="devicon-heroku-original"></i></a>
             </div>
             <div class="animated icon col">
                 <a href="https://aws.amazon.com/" target="_blank" class="tech"><i class="devicon-amazonwebservices-original"></i></a>
