@@ -34,9 +34,12 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
     }
-    a:hover {
-        color: #FFFFFF;
+    a{
+        color: gray;
     }
+/*    a:hover {
+        color: #FFFFFF;
+    }*/
     #name{
         margin-top: 1%;
     }
@@ -65,6 +68,9 @@
     #stackoverflow:hover{
         color: #f48024;
     }
+    .tech:hover {
+        color: #FFFFFF;
+    }
 </style>
 
 <script>
@@ -91,22 +97,22 @@
         <h2 class="text-center">Languages I know: </h2>
         <div class="row">
             <div class="animated icon col">
-                <a href="https://www.python.org/"><i class="devicon-python-plain"></i></a>
+                <a href="https://www.python.org/" class="tech"><i class="devicon-python-plain"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript"><i class="devicon-javascript-plain"></i></a>
+                <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" class="tech"><i class="devicon-javascript-plain"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3"><i class="devicon-css3-plain"></i></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" class="tech"><i class="devicon-css3-plain"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"><i class="devicon-html5-plain"></i></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" class="tech"><i class="devicon-html5-plain"></i></a>
             </div>
             <div class="animated icon col">
-                <a href="https://java.com/en/" target="_blank"><i class="devicon-java-plain"></i></a>
+                <a href="https://java.com/en/" target="_blank" class="tech"><i class="devicon-java-plain"></i></a>
             </div>
         </div>
     </div>
@@ -115,57 +121,57 @@
 
         <div class="row">
             <div class="animated icon col">
-                <a href="https://www.android.com/" target="_blank"><i class="devicon-android-plain"></i></a>
+                <a href="https://www.android.com/" target="_blank" class="tech"><i class="devicon-android-plain"></i></a>
             </div>
             <div class="animated icon col">
-                <a href="https://nodejs.org/en/" target="_blank"><i class="devicon-nodejs-plain animated"></i></a>
-            </div>
-
-            <div class="animated icon col">
-                <a href="https://getbootstrap.com/" target="_blank"><i class="devicon-bootstrap-plain"></i></a>
-            </div>
-            <div class="animated icon col">
-                <a href="https://git-scm.com/" target="_blank"><i class="devicon-git-plain"></i></a>
+                <a href="https://nodejs.org/en/" target="_blank" class="tech"><i class="devicon-nodejs-plain animated"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://expressjs.com/" target="_blank"><i class="devicon-express-original"></i></a>
+                <a href="https://getbootstrap.com/" target="_blank" class="tech"><i class="devicon-bootstrap-plain"></i></a>
+            </div>
+            <div class="animated icon col">
+                <a href="https://git-scm.com/" target="_blank" class="tech"><i class="devicon-git-plain"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://jquery.com/" target="_blank"><i class="devicon-jquery-plain"></i></a>
-            </div>
-            <div class="animated icon col">
-                <i class="devicon-linux-plain"></i>
-            </div>
-            <div class="animated icon col">
-                <a href="heroku.com" target="_blank"><i class="devicon-heroku-original"></i></a>
-            </div>
-            <div class="animated icon col">
-                <a href="https://aws.amazon.com/" target="_blank"><i class="devicon-amazonwebservices-original"></i></a>
+                <a href="https://expressjs.com/" target="_blank" class="tech"><i class="devicon-express-original"></i></a>
             </div>
 
             <div class="animated icon col">
-                <a href="https://www.mongodb.com/" target="_blank"><i class="devicon-mongodb-plain"></i></a>
+                <a href="https://jquery.com/" target="_blank" class="tech"><i class="devicon-jquery-plain"></i></a>
+            </div>
+            <div class="animated icon col">
+                <i class="devicon-linux-plain" class="tech"></i>
+            </div>
+            <div class="animated icon col">
+                <a href="heroku.com" target="_blank" class="tech"><i class="devicon-heroku-original"></i></a>
+            </div>
+            <div class="animated icon col">
+                <a href="https://aws.amazon.com/" target="_blank" class="tech"><i class="devicon-amazonwebservices-original"></i></a>
+            </div>
+
+            <div class="animated icon col">
+                <a href="https://www.mongodb.com/" target="_blank" class="tech"><i class="devicon-mongodb-plain"></i></a>
             </div>
         </div>
 
         <div id="contact">
             <h2 class="text-center">Connect with me:</h2>
             <div class="row">
-                <div class="connect col text-center" id="linkedin">
-                    <a href="https://www.linkedin.com/notifications/">
+                <div class="connect col text-center" >
+                    <a href="https://www.linkedin.com/notifications/" id="linkedin">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-                <div class="connect col text-center" id="github">
-                    <i class="fab fa-github"></i>
+                <div class="connect col text-center">
+                    <a href="https://github.com/kumailn" id="github"><i class="fab fa-github"></i></a>
                 </div>
-                <div class="connect col text-center" id="email">
-                    <a href="mailto:kumailmn@gmail.com"><i class="far fa-envelope"></i></a>
+                <div class="connect col text-center">
+                    <a href="mailto:kumailmn@gmail.com" id="email"><i class="far fa-envelope"></i></a>
                 </div>
-                <div class="connect col text-center" id="stackoverflow">
-                    <i class="fab fa-stack-overflow"></i>
+                <div class="connect col text-center" >
+                    <a href="https://stackoverflow.com/users/7452052/kumail" id="stackoverflow"><i class="fab fa-stack-overflow animated"></i></a>
                 </div>
             </div>
         </div>
