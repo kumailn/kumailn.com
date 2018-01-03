@@ -24,11 +24,10 @@
         width: 100px;
         float: left;
         margin: 1% 1% 1% 1%;
-        paddint-top: 20px;
     }
 
     #main {
-        padding-top: 1%;
+        padding-top: 0%;
     }
 
     * {
@@ -85,10 +84,19 @@
     .row {
         padding-top: 2%;
     }
+    
+    img {
+        width: 60px;
+    }
+
+
 </style>
 
 <script>
     window.onload = function() {
+        var lang = "Languages I know:";
+        var tool = "Tools I work with:";
+
         $("i").hover(function(){
             $(this).toggleClass("colored");
         });
@@ -97,7 +105,25 @@
             $(this).toggleClass("tada");
         });
 
-        var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Traveller", "Computer Scientist"]
+        $(".lang").on({
+            mouseenter: function () {
+                $("#languagetext").text($(this).attr('id'));
+            },
+            mouseleave: function () {
+                $("#languagetext").text(lang);
+            }
+        });
+
+        $(".tool").on({
+            mouseenter: function () {
+                $("#tooltext").text($(this).attr('id'));
+            },
+            mouseleave: function () {
+                $("#tooltext").text(tool);
+            }
+        });
+
+        var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Computer Scientist", "Innovator", "Thinker", "Student", "Creator"]
         function pickOne(lines) {
             console.log(Math.random() * lines.length);
         }
@@ -123,6 +149,20 @@
                 }
                 picked.push(index);
                 $("#caption").text(lines[index]);
+
+                //$('#caption').textShuffle().play();
+                $('#caption').textShuffle({
+
+                    // custom characters
+                    chars: "01#/&%$?_-%*",
+
+                    // animation speed
+                    animationSpeed: 15,
+
+                    // trigger element
+                    bindEvent: "mouseover"
+
+            }).play();
                 console.log(lines[index]);
                 //console.log(getRandomInt(0, lines.length));
             }
@@ -135,71 +175,75 @@
 
 </script>
 <div>
-    <h1 class="text-center" id="name">Kumail Naqvi</h1>
+    <h1 class="text-center" id="name"><img src="code.png" alt=""> Kumail Naqvi</h1>
     <h3 class="text-center" id="caption">Coder</h3>
 </div>
 <div class="container" id="main">
 
     <div id="languages">
-        <h2 class="text-center">Languages I know: </h2>
+        <h2 class="text-center" id="languagetext">Languages I know: </h2>
         <div class="row">
-            <div class="animated icon col">
+            <div class="animated icon col lang text-center" id="Python">
                 <a href="https://www.python.org/" class="tech"><i class="devicon-python-plain"></i></a>
             </div>
-
-            <div class="animated icon col">
-                <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" class="tech"><i class="devicon-javascript-plain"></i></a>
+            <div class="animated icon col lang text-center" id="JavaScript">
+                <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" class="tech "><i class="devicon-javascript-plain"></i></a>
             </div>
-
-            <div class="animated icon col">
+            <div class="animated icon col lang text-center" id="Java">
+                <a href="https://java.com/en/" target="_blank" class="tech"><i class="devicon-java-plain"></i></a>
+            </div>
+            <div class="animated icon col lang text-center" id="HTML">
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" class="tech"><i class="devicon-html5-plain"></i></a>
+            </div>
+            <div class="animated icon col lang text-center" id="CSS">
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" class="tech"><i class="devicon-css3-plain"></i></a>
             </div>
 
-            <div class="animated icon col">
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" class="tech"><i class="devicon-html5-plain"></i></a>
-            </div>
-            <div class="animated icon col">
-                <a href="https://java.com/en/" target="_blank" class="tech"><i class="devicon-java-plain"></i></a>
-            </div>
         </div>
     </div>
     <div id="tools">
-        <h2 class="text-center">Tools I work with:</h2>
+        <h2 class="text-center" id="tooltext">Tools I work with:</h2>
 
         <div class="row">
-            <div class="animated icon col">
-                <a href="https://www.android.com/" target="_blank" class="tech"><i class="devicon-android-plain"></i></a>
-            </div>
-            <div class="animated icon col">
+            <div class="animated icon col tool text-center" id="Node.js">
                 <a href="https://nodejs.org/en/" target="_blank" class="tech"><i class="devicon-nodejs-plain animated"></i></a>
             </div>
 
-            <div class="animated icon col">
+            <div class="animated icon col tool text-center" id="Express">
+                <a href="https://expressjs.com/" target="_blank" class="tech"><i class="devicon-express-original"></i></a>
+            </div>
+
+            <div class="animated icon col tool text-center" id="Android">
+                <a href="https://www.android.com/" target="_blank" class="tech"><i class="devicon-android-plain"></i></a>
+            </div>
+
+
+            <div class="animated icon col tool text-center" id="Bootstrap">
                 <a href="https://getbootstrap.com/" target="_blank" class="tech"><i class="devicon-bootstrap-plain"></i></a>
             </div>
-            <div class="animated icon col">
+
+            <div class="animated icon col tool text-center" id="jQuery">
+                <a href="https://jquery.com/" target="_blank" class="tech"><i class="devicon-jquery-plain"></i></a>
+            </div>
+
+
+        </div>
+        <div class="row" >
+            <div class="animated icon col text-center tool" id="Git">
                 <a href="https://git-scm.com/" target="_blank" class="tech"><i class="devicon-git-plain"></i></a>
             </div>
 
-            <div class="animated icon col">
-                <a href="https://expressjs.com/" target="_blank" class="tech"><i class="devicon-express-original"></i></a>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="animated icon col">
-                <a href="https://jquery.com/" target="_blank" class="tech"><i class="devicon-jquery-plain"></i></a>
-            </div>
-            <div class="animated icon col">
+            <div class="animated icon col text-center tool" id="Linux">
                 <i class="devicon-linux-plain" class="tech"></i>
             </div>
-            <div class="animated icon col">
+            <div class="animated icon col text-center tool" id="Heroku">
                 <a href="https://www.heroku.com/" target="_blank" class="tech"><i class="devicon-heroku-original"></i></a>
             </div>
-            <div class="animated icon col">
+            <div class="animated icon col text-center tool" id="AWS">
                 <a href="https://aws.amazon.com/" target="_blank" class="tech"><i class="devicon-amazonwebservices-original"></i></a>
             </div>
 
-            <div class="animated icon col">
+            <div class="animated icon col text-center tool" id="MongoDB">
                 <a href="https://www.mongodb.com/" target="_blank" class="tech"><i class="devicon-mongodb-plain"></i></a>
             </div>
         </div>
