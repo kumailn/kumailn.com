@@ -12,11 +12,11 @@ app.get("/s", function(req, res){
   res.render("home");
 });
 
-app.get("/", function(req, res){
+app.get("/d", function(req, res){
     res.render("s");
 });
 
-app.get("/d", function(req, res){
+app.get("/", function(req, res){
     res.render("newhome");
 });
 
