@@ -106,6 +106,13 @@
     img {
         width: 60px;
     }
+    .white {
+        color: white;
+    }
+
+    #Linux:hover {
+        color: white;
+    }
 
 
 </style>
@@ -116,7 +123,13 @@
         var tool = "Tools I work with:";
 
         $("i").hover(function(){
-            $(this).toggleClass("colored");
+            console.log($(this).attr("class"));
+            if(($(this).attr("class").includes("devicon-linux-plain"))){
+                $(this).toggleClass("white");
+            }
+            else{
+                $(this).toggleClass("colored");
+            }
         });
 
         $(".icon").hover(function(){
@@ -140,6 +153,8 @@
                 $("#tooltext").text(tool);
             }
         });
+
+
 
         var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Computer Scientist", "Innovator", "Student", "Creator"    ]
         function pickOne(lines) {
@@ -257,7 +272,7 @@
             </div>
 
             <div class="animated icon col text-center tool" id="Linux">
-                <i class="devicon-linux-plain" class="tech"></i>
+                <i class="devicon-linux-plain linux"></i>
             </div>
             <div class="animated icon col text-center tool" id="Heroku">
                 <a href="https://www.heroku.com/" target="_blank" class="tech"><i class="devicon-heroku-original"></i></a>
