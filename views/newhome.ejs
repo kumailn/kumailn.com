@@ -10,7 +10,7 @@
 
     body:not(.navbar) {
         font-family: Roboto;
-        background-color: #000022;
+        background-color: #ffffff;
     }
 
     i {
@@ -26,11 +26,11 @@
     }
     h1 {
         font-family: 'Merriweather Sans', sans-serif;
-        color: white;
+        color: black;
     }
 
     h2, #caption {
-        color: white;
+        color: black;
     }
 
     .anim{
@@ -41,6 +41,7 @@
         width: 100px;
         float: left;
         margin: 1% 1% 1% 1%;
+        cursor:hand;
     }
 
     #main {
@@ -201,7 +202,12 @@
             }
             , 2000);
 
+        $("#Python").click(function(){
+            // $('#python-button').trigger('click');
+            $('#exampleModal').modal('show');
 
+
+        })
     }
 
 
@@ -216,13 +222,42 @@
     <h1 class="text-center" id="name"><img src="code.png" alt=""> Kumail Naqvi</h1>
     <h3 class="text-center" id="caption">Coder</h3>
 </div>
-<div class="container" id="main">
 
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <li> 
+            <ul>This website</ul>
+            <ul>Crypto price converter</ul>
+            <ul>This website</ul>
+            <ul>This website</ul>
+          </li> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+              
+<div class="container" id="main">
+    
     <div id="languages">
         <h2 class="text-center" id="languagetext">Languages I know: </h2>
         <div class="row">
             <div class="animated icon col lang text-center" id="Python">
-                <a href="https://www.python.org/" class="tech"><i class="devicon-python-plain"></i></a>
+
+                <i role="button" data-toggle="modal" data-target="#exampleModal" class="devicon-python-plain"></i></a>
             </div>
             <div class="animated icon col lang text-center" id="JavaScript">
                 <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" class="tech "><i class="devicon-javascript-plain"></i></a>

@@ -24,6 +24,9 @@ app.get("/d", function(req, res){
    res.render("index");
 });
 
+app.get("/test", function(req, res){
+  res.render("f");
+});
 app.listen(port, function(){
   console.log("Server started on port " + port);
 });
