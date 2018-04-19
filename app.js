@@ -16,6 +16,8 @@ app.get("/d", function(req, res){
     res.render("s");
 });
 
+//sup  
+
 app.get("/", function(req, res){
     res.render("newhome");
 });
@@ -26,7 +28,7 @@ app.get("/d", function(req, res){
 
 app.get("/test", function(req, res){
   res.render("f");
-});
+}); 
 app.listen(port, function(){
   console.log("Server started on port " + port);
 });
