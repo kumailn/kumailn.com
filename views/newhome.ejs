@@ -8,6 +8,11 @@
         z-index: -1;
     }
 
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
     body:not(.navbar) {
         font-family: Roboto;
         background-color: #ffffff;
@@ -35,11 +40,11 @@
 
     h1 {
         font-family: 'Merriweather Sans', sans-serif;
-        color: black;
+        color: gray;
     }
 
     h2, #caption {
-        color: black;
+        color: gray;
     }
 
     .anim{
@@ -79,8 +84,14 @@
             color: #FFFFFF;
         }*/
 
+
+    i:hover {
+        cursor: pointer;
+    }
+
     #name{
         margin-top: 1%;
+        font-weight: 800;
     }
 
     #linkedin {
@@ -175,7 +186,7 @@
 
 
 
-        var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Computer Scientist", "Innovator", "Student", "Creator", "Blockchain Enthusiast", "Problem solver"  ]
+        var lines = ["Coder", "Software Developer", "Hacker", 'Learner', "Tinkerer", "Hackathon Enthusiast", "Computer Scientist", "Innovator", "Student", "Creator", "Blockchain Enthusiast", "Problem solver", "Leader"]
         function pickOne(lines) {
             console.log(Math.random() * lines.length);
         }
@@ -245,6 +256,13 @@
             $('#herokuModal').modal('show');
         });
 
+        tippy('#email');
+        tippy('#stackoverflow');
+        tippy('#github');
+        tippy('#linkedin');
+        tippy('#resume');
+
+
         
 
     }
@@ -306,21 +324,23 @@
     </div>
   </div>
 
-  <div class="modal fade" id="herokuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="nodeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Things I've made with Heroku: </h5>
+          <h5 class="modal-title" id="exampleModalLabel">Things I've made with Node.js: </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
             <ul>
-                <li>Crypto price converter</li>
-                <a href="https://github.com/kumailn/CryptoApp">https://github.com/kumailn/CryptoApp</a>
-                <li>Todo web app</li>
-                <a href="https://github.com/kumailn/todoApp">https://github.com/kumailn/todoApp</a>
+                <li><a href="https://github.com/kumailn/PaperTrail">PaperTrail</a></li>
+                <p>A blockchain based scientific journal, with its own crypto-currency, that incentivizes legitimacy, transparency, and peer review. Built on the Ethereum blockchain with Truffle, Zeppelin, and IPFS. Winner at HackPrinceton spring '18 at Princeton University, NJ, USA.</p>
+                <li><a href="https://github.com/kumailn/CryptoApp">CryptoApp</a></li>
+                <p>An instant crypto price converter based on Regex</p>
+                <li><a href="https://github.com/kumailn/todoApp">Todo App</a></li>
+                <p>A simple todo app that keeps track of tasks</p>
                 <li>This website!</li>
             </ul>
         </div>
@@ -349,8 +369,9 @@
                 <li> <a href="https://github.com/kumailn/eyeAware">eyeAware</a> </li>
                 <p>An app that helps blind users 'see' by describing the world around them. Built using Google's Cloud Vision and Natural Language processing API. Built at yHack 2017 at Yale University, CT, USA.</p>
                 <li> <a href="https://github.com/kumailn/BudgetApp">BudgetBuddy</a></li>
-                <li>alarmClock</li>
-                <a href="https://github.com/kumailn/alarmClock">https://github.com/kumailn/alarmClock</a>
+                <p>A smart budgeting app that helps you keep track of expenses and purchases by notifing you how much you have left to sepnd on a particular catagory when it detects you are in a store. Built with the Google Places API</p>
+                <li><a href="https://github.com/kumailn/alarmClock">alarmClock</a></li>
+                <p>A really simple alarm clock</p>
             </ul>
         </div>
         <div class="modal-footer">
@@ -410,30 +431,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="nodeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Things I've made with NodeJS: </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <ul>
-                <li>This website!</li>
-                <li>PaperTrail</li>
-                <a href="https://github.com/kumailn/PaperTrail">https://github.com/kumailn/PaperTrail</a>
 
-            </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
               
 <div class="container" id="main">
     
@@ -444,10 +442,10 @@
                 <i role="button" data-toggle="modal" data-target="#exampleModal" class="devicon-python-plain"></i></a>
             </div>
             <div class="animated icon col lang text-center" id="JavaScript">
-                <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" class="tech "><i class="devicon-javascript-plain"></i></a>
+                <i class="devicon-javascript-plain"></i></a>
             </div>
             <div class="animated icon col lang text-center" id="Java">
-                <a href="https://java.com/en/" target="_blank" class="tech"><i class="devicon-java-plain"></i></a>
+                <i class="devicon-java-plain"></i></a>
             </div>
             <div class="animated icon col lang text-center" id="HTML">
                 <i class="devicon-html5-plain"></i></a>
@@ -467,7 +465,7 @@
             </div>
 
             <div class="animated icon col tool text-center" id="Express">
-                <a href="https://expressjs.com/" target="_blank" class="tech"><i class="devicon-express-original"></i></a>
+                <i class="devicon-express-original"></i></a>
             </div>
 
             <div class="animated icon col tool text-center" id="Android">
@@ -476,18 +474,18 @@
 
 
             <div class="animated icon col tool text-center" id="Bootstrap">
-                <a href="https://getbootstrap.com/" target="_blank" class="tech"><i class="devicon-bootstrap-plain"></i></a>
+                <i class="devicon-bootstrap-plain"></i></a>
             </div>
 
             <div class="animated icon col tool text-center" id="jQuery">
-                <a href="https://jquery.com/" target="_blank" class="tech"><i class="devicon-jquery-plain"></i></a>
+                <i class="devicon-jquery-plain"></i></a>
             </div>
 
 
         </div>
         <div class="row" >
             <div class="animated icon col text-center tool" id="Git">
-                <a href="https://git-scm.com/" target="_blank" class="tech"><i class="devicon-git-plain"></i></a>
+                <i class="devicon-git-plain"></i></a>
             </div>
 
             <div class="animated icon col text-center tool" id="React">
@@ -497,11 +495,11 @@
                 <i class="devicon-heroku-original"></i></a>
             </div>
             <div class="animated icon col text-center tool" id="AWS">
-                <a href="https://aws.amazon.com/" target="_blank" class="tech"><i class="devicon-amazonwebservices-original"></i></a>
+                <i class="devicon-amazonwebservices-original"></i></a>
             </div>
 
             <div class="animated icon col text-center tool" id="MongoDB">
-                <a href="https://www.mongodb.com/" target="_blank" class="tech"><i class="devicon-mongodb-plain"></i></a>
+                <i class="devicon-mongodb-plain"></i></a>
             </div>
         </div>
 
@@ -509,18 +507,21 @@
             <h2 class="text-center">Connect with me:</h2>
             <div class="row">
                 <div class="connect col text-center" >
-                    <a href="https://www.linkedin.com/in/kumailn/" id="linkedin">
+                    <a href="https://www.linkedin.com/in/kumailn/" id="linkedin"title="Find me on LinkedIN">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
                 <div class="connect col text-center">
-                    <a href="https://github.com/kumailn" id="github"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/kumailn" id="github" title="Check out my GitHub"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="connect col text-center">
-                    <a href="mailto:kumailmn@gmail.com" id="email"><i class="far fa-envelope"></i></a>
+                    <a href="mailto:kumailmn@gmail.com" id="email" title="Email Me"><i class="far fa-envelope"></i></a>
                 </div>
                 <div class="connect col text-center" >
-                    <a href="https://stackoverflow.com/users/7452052/kumail" id="stackoverflow"><i class="fab fa-stack-overflow animated"></i></a>
+                    <a href="https://stackoverflow.com/users/7452052/kumail" id="stackoverflow" title="Find me on StackOverflow"><i class="fab fa-stack-overflow animated"></i></a>
+                </div>
+                <div class="connect col text-center">
+                    <a href="resume.pdf" id="resume" title="Check out my resume"><i class="far fa-file-alt"></i></a>
                 </div>
             </div>
         </div>

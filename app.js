@@ -2,7 +2,7 @@ var express = require("express");
 var favicon = require('serve-favicon');
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -15,8 +15,6 @@ app.get("/s", function(req, res){
 app.get("/d", function(req, res){
     res.render("s");
 });
-
-//sup  
 
 app.get("/", function(req, res){
     res.render("newhome");
