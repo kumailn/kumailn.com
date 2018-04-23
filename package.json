@@ -12,6 +12,7 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.4.5",
+    "tippy.js": "^1.4.2"
   }
 }
