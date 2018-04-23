@@ -55,18 +55,17 @@
         width: 150px;
         float: left;
         margin: 1% 1% 1% 1%;
-        cursor:hand;
     }  
 
     i {
         font-size: 150px;
-    }
+    } 
     #main {
         padding-top: 0%;
     }
 
     li{
-        font-weight: 800;
+        font-weight: 800;   
     }
 
     * {
@@ -85,9 +84,6 @@
         }*/
 
 
-    i:hover {
-        cursor: pointer;
-    }
 
     #name{
         margin-top: 1%;
@@ -154,12 +150,7 @@
 
         $("i").hover(function(){
             console.log($(this).attr("class"));
-            if(($(this).attr("class").includes("devicon-linux-plain"))){
-                $(this).toggleClass("white");
-            }
-            else{
                 $(this).toggleClass("colored");
-            }
         });
 
         $(".icon").hover(function(){
@@ -231,7 +222,7 @@
             }
             , 2000);
 
-        $("#Python").click(function(){
+/*         $("#Python").click(function(){
             // $('#python-button').trigger('click');
             $('#exampleModal').modal('show');
         });
@@ -254,7 +245,7 @@
         $("#Heroku").click(function(){
             // $('#python-button').trigger('click');
             $('#herokuModal').modal('show');
-        });
+        }); */
 
         tippy('#email');
         tippy('#stackoverflow');
@@ -277,29 +268,6 @@
 </div>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <ul>
-                <li>Crypto price converter</li>
-                <li>Todo web app</li>
-                <li>This website!</li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="modal fade" id="jsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -483,21 +451,21 @@
 
 
         </div>
+
         <div class="row" >
             <div class="animated icon col text-center tool" id="Git">
                 <i class="devicon-git-plain"></i></a>
             </div>
 
             <div class="animated icon col text-center tool" id="React">
-                <i class="devicon-react-original"></i>
+                <i class="devicon-react-plain"></i>
+            </div>
+            <div class="animated icon col text-center tool" id="Vuejs">
+                <i class="devicon-vuejs-plain"></i></a>
             </div>
             <div class="animated icon col text-center tool" id="Heroku">
                 <i class="devicon-heroku-original"></i></a>
             </div>
-            <div class="animated icon col text-center tool" id="AWS">
-                <i class="devicon-amazonwebservices-original"></i></a>
-            </div>
-
             <div class="animated icon col text-center tool" id="MongoDB">
                 <i class="devicon-mongodb-plain"></i></a>
             </div>
@@ -521,7 +489,7 @@
                     <a href="https://stackoverflow.com/users/7452052/kumail" id="stackoverflow" title="Find me on StackOverflow"><i class="fab fa-stack-overflow animated"></i></a>
                 </div>
                 <div class="connect col text-center">
-                    <a href="resume.pdf" id="resume" title="Check out my resume"><i class="far fa-file-alt"></i></a>
+                    <i id="resume" title="Check out my resume" class="far fa-file-alt"></i></a>
                 </div>
             </div>
         </div>
