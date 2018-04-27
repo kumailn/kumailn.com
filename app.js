@@ -2,7 +2,7 @@ var express = require("express");
 var favicon = require('serve-favicon');
 var app = express();
 
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 5000;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
