@@ -14,7 +14,7 @@ app.get("/s", function(req, res){
 
 app.get("/d", function(req, res){
     res.render("s");
-});
+}); 
 
 app.get("/", function(req, res){
     res.render("newhome");
